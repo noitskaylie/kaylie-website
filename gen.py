@@ -10,6 +10,9 @@ SUBFOLDER_TO_PERMALINK = {
 }
 
 for subfolder, link in SUBFOLDER_TO_PERMALINK.items():
+
+    print('making dir for', subfolder, 'with link', link)
+    
     f = None
     if subfolder == ROOT:
         f = open('index.html', 'w')
