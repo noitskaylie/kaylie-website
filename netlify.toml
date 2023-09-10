@@ -5,3 +5,8 @@
     max-age=63072000;
     includeSubDomains;
     preload'''
+
+[build]
+  base    = ""
+  publish = "build"
+  command = "python gen.py"
