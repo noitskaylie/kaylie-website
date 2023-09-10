@@ -1,6 +1,5 @@
 import os
 import os.path as osp
-from pathlib import Path
 
 ROOT = '/'
 
@@ -15,9 +14,8 @@ for subfolder, link in SUBFOLDER_TO_PERMALINK.items():
     if subfolder == ROOT:
         f = open('index.html', 'w')
     else:
-        subfolder_path = Path(subfolder)
-        subfolder_path.mkdir(parents=True, exist_ok=True)
-        f = open(str(subfolder_path / 'index.html'), 'w')
+        os.makedirs(subfolder)
+        f = open(f'{subfolder}/index.html', 'w')
 
     f.write(
 f"""<html>
