@@ -1,22 +1,24 @@
 import os
 import os.path as osp
-from pathlib import Path
 
 ROOT = '/'
 
 SUBFOLDER_TO_PERMALINK = {
     ROOT: 'https://kaylielam03.wixsite.com/myportfolio',
-    'vda': 'https://vda-kaylielam.notion.site/vda-kaylielam/Visual-Design-Apprenticeship-Journal-b3e84cd456114f1aa913d58f4e1d7c17'
+    'vda': 'https://vda-kaylielam.notion.site/vda-kaylielam/Visual-Design-Apprenticeship-Journal-b3e84cd456114f1aa913d58f4e1d7c17',
+    'bb': 'https://arth.website/',
 }
 
 for subfolder, link in SUBFOLDER_TO_PERMALINK.items():
+
+    print('making dir for', subfolder, 'with link', link)
+    
     f = None
     if subfolder == ROOT:
         f = open('index.html', 'w')
     else:
-        subfolder_path = Path(subfolder)
-        subfolder_path.mkdir(parents=True, exist_ok=True)
-        f = open(str(subfolder_path / 'index.html'), 'w')
+        os.makedirs(subfolder)
+        f = open(f'{subfolder}/index.html', 'w')
 
     f.write(
 f"""<html>
