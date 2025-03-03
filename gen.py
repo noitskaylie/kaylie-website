@@ -4,7 +4,7 @@ import os.path as osp
 ROOT = '/'
 
 SUBFOLDER_TO_PERMALINK = {
-    ROOT: 'https://kaylielam03.wixsite.com/myportfolio',
+    ROOT: 'https://lamkayliek.wixstudio.com/kaylielam',
     'vda': 'https://vda-kaylielam.notion.site/vda-kaylielam/Visual-Design-Apprenticeship-Journal-b3e84cd456114f1aa913d58f4e1d7c17',
     'resume': '../Kaylie_Lam_Resume.pdf',
 }
